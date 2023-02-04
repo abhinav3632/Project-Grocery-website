@@ -35,7 +35,7 @@
         <h1 class="title">Cart</h1><hr>
     </div>	
     <div class="small-container cart-page">
-        <table>
+        <table id="dsTable">
             <tr>
                 <th>Product</th>
                 <th>Quantity</th>
@@ -49,12 +49,12 @@
                             <p>Magnum Tub Milk Chocolate Vanilla Ice Cream 440ml</p>
                             <small>Price: ₹297</small>
                             <br>
-                            <a href="">Remove</a>
+                            <a onclick = "deleteRow(this,'a')"  >Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
-                <td>₹297</td>
+                <td><input type="number" value="1"  onchange="calc(this,'a')" ></td>
+                <td id="a">297</td>
             </tr>
             <tr>
                 <td>
@@ -64,12 +64,12 @@
                             <p>Grapefruit Juice 200ml</p>
                             <small>Price: ₹40</small>
                             <br>
-                            <a href="">Remove</a>
+                            <a  onclick = "deleteRow(this,'b')" >Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
-                <td>₹40</td>
+                <td><input type="number" value="1" onchange="calc(this,'b')" ></td>
+                <td id="b" >40</td>
             </tr>
             <tr>
                 <td>
@@ -79,32 +79,31 @@
                             <p>Organic Sugar 500gm</p>
                             <small>Price: ₹99</small>
                             <br>
-                            <a href="">Remove</a>
+                            <a onclick = "deleteRow(this,'.c')" >Remove</a>
                         </div>
                     </div>
                 </td>
-                <td><input type="number" value="1"></td>
-                <td>₹99</td>
+                <td><input type="number" value="1" onchange="calc(this,'c')" ></td>
+                <td id="c">99</td>
             </tr>
         </table>
         <div class="total-price">
             <table>
                 <tr>
                     <td>Subtotal</td>
-                    <td>₹540.00</td>
+                    <td id="b1">540.00</td>
                 </tr>
                 <tr>
                     <td>Tax</td>
-                    <td>₹73.00</td>
+                    <td id="b2" >73.00</td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>₹612.00</td>
+                    <td id="b3">612.00</td>
                 </tr>
             </table>
         </div>
     </div>
-
  <!-----------------footer--------------->
 <div class="footer">
     <div class="container">
@@ -143,5 +142,6 @@
         <p class="copyright">Copyright 2020-2024 - ABM Groceries</p>
     </div>
  </div>
+    <script src="cart.js" ></script>
  </body>
  </html>
